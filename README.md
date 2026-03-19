@@ -444,12 +444,17 @@ While built for Claude Code, the VAPT skills work with other AI coding agents:
 | Platform | Config File | Parallel Waves | Slash Commands |
 |----------|------------|----------------|----------------|
 | **Claude Code** | `SKILL.md` (native) | Yes (subagents) | `/vapt <command>` |
+| **OpenCode** | `AGENTS.md` / `CLAUDE.md` fallback | Sequential | Natural language |
 | **Codex CLI** | `AGENTS.md` | Sequential | Natural language |
 | **Gemini CLI** | `GEMINI.md` | Sequential | Natural language |
 
 The testing methodology, external tools (nmap, sqlmap, nuclei, etc.), and output formats are identical across all platforms. Each platform config file includes a tool name mapping table.
 
-For Codex or Gemini CLI, clone this repo into your project and the agent will pick up the instructions from `AGENTS.md` or `GEMINI.md` respectively.
+**Usage by platform:**
+- **Claude Code** — Install via `install.sh` or use `/vapt` slash commands directly
+- **OpenCode** — Clone this repo and work from within it. OpenCode reads `AGENTS.md` natively (falls back to `CLAUDE.md`)
+- **Codex CLI** — Clone this repo. Codex picks up instructions from `AGENTS.md`
+- **Gemini CLI** — Clone this repo. Gemini picks up instructions from `GEMINI.md`
 
 ---
 
