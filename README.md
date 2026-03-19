@@ -13,19 +13,6 @@
 
 ---
 
-## Why VAPT Matters
-
-| Metric | Value |
-|--------|-------|
-| Average cost of a data breach (2025) | $4.88M |
-| Web app attacks as breach vector | 26% of all breaches |
-| Mean time to identify a breach | 194 days |
-| OWASP Top 10 coverage of real exploits | ~85% |
-| Organizations with regular pentesting | Only 36% |
-| Regulatory frameworks requiring VAPT | PCI-DSS, SOC 2, ISO 27001, HIPAA |
-
----
-
 ## Quick Start
 
 ### One-Command Install (macOS/Linux)
