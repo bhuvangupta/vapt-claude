@@ -18,13 +18,13 @@
 ### One-Command Install (macOS/Linux)
 
 ```bash
-curl -fsSL https://raw.githubusercontent.com/YOUR_USERNAME/vapt-claude/main/install.sh | bash
+curl -fsSL https://raw.githubusercontent.com/bhuvangupta/vapt-claude/main/install.sh | bash
 ```
 
 ### Manual Install
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/vapt-claude.git
+git clone https://github.com/bhuvangupta/vapt-claude.git
 cd vapt-claude
 ./install.sh
 ```
@@ -218,9 +218,12 @@ vapt-claude/
 │   ├── finding-template.md              # Per-finding report template
 │   └── remediation-guide.md             # Common vulnerability fixes
 │
+├── AGENTS.md                            # Codex CLI support
+├── GEMINI.md                            # Gemini CLI support
 ├── install.sh                           # One-command installer
 ├── uninstall.sh                         # Clean uninstaller
 ├── requirements.txt                     # Python dependencies
+├── LICENSE                              # MIT License
 └── README.md                            # This file
 ```
 
@@ -431,6 +434,22 @@ All outputs are written to the current working directory:
 - Generated reports map findings to CWE IDs
 - Authorization log satisfies audit trail requirements
 - Security Posture Score tracks improvement over time
+
+---
+
+## Cross-Platform Support
+
+While built for Claude Code, the VAPT skills work with other AI coding agents:
+
+| Platform | Config File | Parallel Waves | Slash Commands |
+|----------|------------|----------------|----------------|
+| **Claude Code** | `SKILL.md` (native) | Yes (subagents) | `/vapt <command>` |
+| **Codex CLI** | `AGENTS.md` | Sequential | Natural language |
+| **Gemini CLI** | `GEMINI.md` | Sequential | Natural language |
+
+The testing methodology, external tools (nmap, sqlmap, nuclei, etc.), and output formats are identical across all platforms. Each platform config file includes a tool name mapping table.
+
+For Codex or Gemini CLI, clone this repo into your project and the agent will pick up the instructions from `AGENTS.md` or `GEMINI.md` respectively.
 
 ---
 

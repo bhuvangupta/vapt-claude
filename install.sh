@@ -6,7 +6,7 @@ set -euo pipefail
 # Installs the VAPT penetration testing skill for Claude Code
 # ============================================================
 
-REPO_URL="https://github.com/YOUR_USERNAME/vapt-claude.git"
+REPO_URL="https://github.com/bhuvangupta/vapt-claude.git"
 CLAUDE_DIR="${HOME}/.claude"
 SKILLS_DIR="${CLAUDE_DIR}/skills"
 AGENTS_DIR="${CLAUDE_DIR}/agents"
